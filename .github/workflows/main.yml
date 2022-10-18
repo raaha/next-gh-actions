@@ -1,0 +1,11 @@
+name: Manual Events
+
+on:
+  workflow_dispatch:
+
+jobs:
+  tests_manaul_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - run: >
+          echo "Ran a workflow manually."
