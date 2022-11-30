@@ -2,10 +2,12 @@ name: CI Deploy
 
 # Only trigger, when the build workflow succeeded
 on:
+  workflow_dispatch:
+  # Only trigger, when the Build (Tests) workflow successed
   workflow_run:
     workflows: ["CI build"]
-    types:
-      - completed
+    types: [completed]
+    branches: [main]
 
 jobs:
   notify:
